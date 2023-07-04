@@ -8,10 +8,9 @@ body {
   background-color: #87afcd;
 }
 
-header {
+.header {
   background-color: #000327; 
   display: flex;
-  align-items: center;
   color: #fff;
 }
 
@@ -28,15 +27,14 @@ h3 {
 }
 
 nav ul {
-  
-  -webkit-filter: invert(100%);
   list-style: none;
   display: flex;
   justify-content: flex-end;
   margin-right: 20px;
 }
+
 nav ul li {
-  margin-left: 20px;
+  color: #fff;
 }
 
 nav a {
@@ -65,15 +63,13 @@ nav a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #525252ee;
   border-right: 2px solid rgb(0, 0, 0);
+  color: #fff;
 }
 
 .firstli {
   border-left: 2px solid rgb(0, 0, 0);
 }
 
-.menu ul li a img {
-  padding-top: 10px;
-}
 
 .about-me {
   margin-top: 10px;
@@ -87,16 +83,6 @@ nav a {
   align-items: center;
 }
 
-h2 {
-  margin: 2% 0;
-  font-size: 250%;
-}
-
-.search-icon a {
-  -webkit-filter: invert(100%);
-  margin-right: 25px;
-  float: right;
-}
 
 .myself img {
   max-width: 50%;
@@ -105,9 +91,7 @@ h2 {
 .flexbox-container {
   flex-grow: 1;
   margin: 0 20%;
-  /* border: 2px solid rgba(var(--bluecard), .6); */
   background-color: rgb(87, 87, 134);
-  /* aspect-ratio: 11/16; */
   border-radius: 1rem;
   text-align: center;
   width: 60%;
@@ -116,8 +100,10 @@ h2 {
 
 .card {
   flex: 1;
-  margin: 25px;
-  min-width: 300px;
+  margin: auto;
+  align-items: center;
+  min-width: 200px;
+  min-height: 300px;
   border: 2px solid rgba(var(--bluecard), .6);
   background-color: rgba(var(--bluecard), .9);
   border-radius: 1rem;
@@ -129,36 +115,22 @@ h2 {
 }
 
 .card a img {
-  max-width: fit-content;
-  width: 90%;
-}
-
-.title {
-  padding-top: 20px;
-}
-
-/* .contact{
-  width: 90%;
-  margin: 5%;
-  border: #000
-  background-color: #e5edde;
-  justify-content: center;
-} */
   
-  #contact-me{
-    width: 50%;
-    margin: 50px 25%;
-    border: #000000 solid;
-    background-color: #deeaf3;
-    border-radius: 1rem;
-    text-align: center;
-  }
+  width: 100%;
+}
+
+
+#contact-me {
+  width: 50%;
+  margin: 50px 25%;
+  border: #000000 solid;
+  background-color: #deeaf3;
+  border-radius: 1rem;
+  text-align: center;
+}
+  
   @media screen and (max-width: 900px) {
-   .flexbox-container{
-    margin: 0 10%;
-    width: 75%;
-   } 
-  }
+  
   @media screen and (max-width: 700px) {
     .flexbox-container  {
       margin: 0 5%; /* The width is 100%, when the viewport is 700px or smaller */
@@ -181,4 +153,4 @@ h2 {
       width: 75%;
     }
   }
-  
+}

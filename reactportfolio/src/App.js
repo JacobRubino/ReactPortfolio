@@ -1,49 +1,53 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { FaCat } from 'react-icons/fa';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
-import { FaCat } from "react-icons/fa";
-import "bootstrap/dist/css/bootstrap.min.css";
+//pages
+import Home from './pages/home';
+import Pets from './pages/pets';
+import Contact from './pages/contact';
 
-
+//images
 
 const App = () => {
   return (
-    <Router>     
-      <header>
+    <Router>
+      <div className="header">
         <h1>Jacob's Portfolio</h1>
-        <nav className="menu">
+        <nav className="menu" style={{ float: 'right' }}>
           <ul>
             <li className="firstli">
-              <Link to='/'>Home</Link>
+              <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to={{ pathname: 'https://github.com/JacobRubino' }} target="_blank">github</Link>
+            <li className="li-border">
+              <Link to={{ pathname: 'https://github.com/JacobRubino' }} target="_blank">
+                github
+              </Link>
             </li>
-            <li>
-              <Link to={{ pathname: 'https://www.instagram.com/jacob_ru_/' }} target='_blank'>Instagram</Link>
+            <li className="li-border">
+              <Link to={{ pathname: 'https://www.instagram.com/jacob_ru_/' }} target="_blank">
+                Instagram
+              </Link>
             </li>
-            <li>
-              <Link to='/pets'>
+            <li className="li-border">
+              <Link to="/pets">
                 <FaCat />
               </Link>
             </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
+            <li className="li-border">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
       <Routes>
-    {/* <Route path='/' exact><Home /></Route>
-
-    <Route path='/pets' exact><Pets /></Route>
-
-    <Route path='/contact' exact><Contact /></Route> */}
-    </Routes>
-  </Router>
-  
-  
+        <Route path="/" element={<Home />} />
+        <Route path="/pets" element={<Pets />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 };
- 
+
 export default App;
