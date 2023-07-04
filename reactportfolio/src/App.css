@@ -101,21 +101,25 @@ nav a {
 .card {
   flex: 1;
   margin: auto;
-  align-items: center;
-  min-width: 200px;
+  align-items: center; 
   min-height: 300px;
+  gap: 1rem;
+  padding: 1rem;
   border: 2px solid rgba(var(--bluecard), .6);
   background-color: rgba(var(--bluecard), .9);
   border-radius: 1rem;
   min-height: 150px;
+  overflow: hidden;
+  max-height: 200px;
 }
 
 .card img {
-  max-height: 250px;
+  aspect-ratio: 1/1;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .card a img {
-  
   width: 100%;
 }
 
@@ -130,7 +134,19 @@ nav a {
 }
   
   @media screen and (max-width: 900px) {
-  
+    .menu ul {
+      flex-direction: column ;
+    }
+    .menu ul li a {
+      border-right: none;
+      
+    }
+    .li-border {
+      border-top:  2px solid rgb(0, 0, 0);
+    }
+    .firstli {
+      border-left: none;
+    }
   @media screen and (max-width: 700px) {
     .flexbox-container  {
       margin: 0 5%; /* The width is 100%, when the viewport is 700px or smaller */
@@ -139,6 +155,7 @@ nav a {
     header nav ul{
       flex-direction: column;
     }
+    
     .menu ul li a{
       border: none;
     }
