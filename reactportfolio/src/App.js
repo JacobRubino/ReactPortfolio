@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Pets from './pages/pets';
 import Contact from './pages/contact';
 import Footer from './pages/footer';
+import Resume from './pages/resume';
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
                 <FaCat />
               </Link>
             </li>
+            <li className='li-border'>
+              <Link to="/resume">Resume</Link>
+            </li>
             <li className="li-border">
               <Link to="/contact">Contact</Link>
             </li>
@@ -33,6 +37,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/" element={<Footer/>} />
         <Route path="/pets" element={<Pets />} />
+        <Route path="/resume" element={<Resume/>} />        
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

@@ -1,11 +1,15 @@
 import React from "react";
+import './footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return(
     <div className="footerContainer">
-      <div className="footerCard">
+      <div className="footerElements">
         <div className="footerContent">
-        Contact
+          <Link to={'/contact'}>
+            Contact
+          </Link>
         </div>
         <div className="footerContent">
           <a href="https://github.com/JacobRubino" target="_blank" rel="noreferrer">

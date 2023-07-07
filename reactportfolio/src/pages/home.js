@@ -7,15 +7,14 @@ import javascriptimg from "../assets/images/javascript.png";
 import dadJokesimg from "../assets/images/image_720.png";
 import vibeTribeimg from "../assets/images/vibetribe.png";
 import selfie from '../assets/images/selfie.png';
+import reactimg from '../assets/images/pngwing.com.png';
 
 const Home = () => {
   return (
     <Container>
       <div className="about-me">Hi, I'm Jacob and this is my portfolio</div>
       <div className="myself">
-        <a href="#">
           <img src={selfie} alt="This is where my selfie would be!" />
-        </a>
       </div>
 
       <h3>Current skills</h3>
@@ -44,7 +43,9 @@ const Home = () => {
           </Col>
           <Col xs={6} md={3}>
             <Card>
-              Coming soon
+              React
+              <br />
+              <img src={reactimg} alt="React" />
             </Card>
           </Col>
         </Row>
