@@ -101,7 +101,7 @@ nav a {
   margin: auto;
   align-items: center; 
   min-height: 320px;
-  
+  margin-bottom: 1rem;
  
   background-color: rgb(79, 76, 106);
   border-radius: 1rem;
